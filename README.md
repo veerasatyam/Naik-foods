@@ -1,5 +1,9 @@
 # Naik Foods (नाईक फूड्स) — Next-Gen Maharashtrian Heritage Platform
 
+🌐 **Live Production Deploy URL**: [https://naik-foods.vercel.app/](https://naik-foods.vercel.app/)  
+📦 **GitHub Repository**: [https://github.com/veerasatyam/Naik-foods](https://github.com/veerasatyam/Naik-foods)  
+⚡ **Admin Portal**: [https://naik-foods.vercel.app/admin](https://naik-foods.vercel.app/admin) (Sign in with `satyamsvs788@gmail.com`)
+
 A modern, accessible, high-performance e-commerce platform for **Naik Foods**, celebrating authentic regional delicacies from **Vidarbha, Konkan, Pune, and Marathwada** since 1938.
 
 ---

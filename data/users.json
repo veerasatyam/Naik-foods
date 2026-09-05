@@ -1,18 +1,26 @@
 [
   {
-    "id": "usr_admin_1",
+    "id": "6a9bf02080fd4a2d1e950ef6",
     "name": "Satyam (Admin)",
     "email": "satyamsvs788@gmail.com",
-    "phone": "9730046247",
+    "phone": "9550178788",
     "role": "admin",
     "createdAt": "2026-09-05T10:20:05.124Z"
   },
   {
-    "id": "usr_demo_customer",
+    "id": "6a9bf02080fd4a2d1e950ef7",
     "name": "Aparna Kulkarni",
     "email": "customer@naikfoods.co.in",
     "phone": "9822012345",
     "role": "customer",
     "createdAt": "2026-09-05T10:20:05.124Z"
+  },
+  {
+    "id": "usr_1788604852631",
+    "name": "veerababu",
+    "email": "svschinnaa@gmail.com",
+    "phone": "9567832974",
+    "role": "customer",
+    "createdAt": "2026-09-05T10:40:52.632Z"
   }
 ]

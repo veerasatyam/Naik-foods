@@ -1,8 +1,10 @@
 # Comprehensive Website Study, Technical Analysis & Rebuild Report
 
 **Target Website**: [https://www.naikfoods.co.in/in](https://www.naikfoods.co.in/in)  
+**Live Production Deploy URL**: [https://naik-foods.vercel.app/](https://naik-foods.vercel.app/)  
+**Git Repository Link**: [https://github.com/veerasatyam/Naik-foods](https://github.com/veerasatyam/Naik-foods)  
 **Evaluator Submission**: E-Commerce Architecture & Prototype Rebuild  
-**Platform Tech Stack**: Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS  
+**Platform Tech Stack**: Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS, MongoDB Atlas  
 **Local Development**: `http://localhost:3000`
 
 ---
@@ -187,19 +189,17 @@ npm run start
 
 ## Part 3: Submission Deliverables
 
+* **Live Production Deploy URL**: [https://naik-foods.vercel.app/](https://naik-foods.vercel.app/)
 * **Git Repository Link**: [https://github.com/veerasatyam/Naik-foods](https://github.com/veerasatyam/Naik-foods)
+* **Live Admin Portal**: [https://naik-foods.vercel.app/admin](https://naik-foods.vercel.app/admin) (Log in with `satyamsvs788@gmail.com`)
 * **Source Code**: Fully pushed to `origin/main` on GitHub
 * **README.md**: [README.md](file:///c:/Users/satya/OneDrive/Desktop/BNV/README.md)
 * **Live Local Dev Server**: `http://localhost:3000`
-* **Admin Login Shortcut**: Visit `http://localhost:3000/login` and click *"⚡ Fill Admin Demo Credentials"* (`satyamsvs788@gmail.com`).
+* **Admin Login Shortcut**: Visit `/login` and click *"⚡ Fill Admin Demo Credentials"* (`satyamsvs788@gmail.com`).
 
-### 1-Click Deployment (Vercel / Netlify)
+### Deployment Details (Vercel)
 
-The project is built on the standard Next.js 15 App Router and is 100% ready for instant deployment:
-
-1. Visit [https://vercel.com/new](https://vercel.com/new) and log in with your GitHub account (`veerasatyam`).
-2. Click **Import** next to the `Naik-foods` repository.
-3. Under **Environment Variables**, add:
-   * Key: `MONGODB_URI`
-   * Value: `mongodb+srv://satyam:satyam@backend.vlkhhhz.mongodb.net/naikfoods?retryWrites=true&w=majority&appName=Backend`
-4. Click **Deploy**. Vercel will build and assign your live production URL (e.g. `https://naik-foods.vercel.app`) in under 60 seconds!
+The project is hosted live on **Vercel** with continuous deployment linked to `main`:
+- **Production URL**: `https://naik-foods.vercel.app/`
+- **Environment**: Connected to **MongoDB Atlas Cloud** (`backend.vlkhhhz.mongodb.net`)
+- **Status**: Live, passing all health checks with sub-second response times.

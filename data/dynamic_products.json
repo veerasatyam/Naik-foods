@@ -1,55 +1,5 @@
 [
   {
-    "id": "prod_1788604693267",
-    "slug": "kolhapuri-lavangi-mirchi-thecha",
-    "name": "Kolhapuri Lavangi Mirchi Thecha",
-    "marathiName": "कोल्हापुरी लवंगी मिरचीचा ठेचा",
-    "region": "Kolhapur",
-    "category": "Chutney",
-    "price": 160,
-    "originalPrice": 200,
-    "rating": 5,
-    "reviewCount": 1,
-    "weight": "250g",
-    "isVeg": true,
-    "isBestSeller": false,
-    "isFastFriendly": false,
-    "inStock": true,
-    "fssaiLicense": "11521036000428",
-    "shelfLife": "6 Months",
-    "shortDescription": "Fiery stone-pounded green chilli thecha with roasted garlic, cumin and groundnut oil.",
-    "marathiShortDesc": "खलबत्त्यात कुटलेला अस्सल झणझणीत कोल्हापुरी लवंगी मिरचीचा ठेचा.",
-    "description": "Fiery stone-pounded green chilli thecha with roasted garlic, cumin and groundnut oil.",
-    "ingredients": [
-      "Lavangi Green Chillies",
-      "Garlic",
-      "Cumin",
-      "Groundnut Oil",
-      "Rock Salt"
-    ],
-    "nutrition": {
-      "Calories": "350 kcal",
-      "Protein": "8g",
-      "Carbohydrates": "50g",
-      "Fat": "12g"
-    },
-    "allergens": [],
-    "images": [
-      "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&auto=format&fit=crop&q=80"
-    ],
-    "reviews": [
-      {
-        "id": "rev_1788604693267",
-        "author": "Verified Customer",
-        "rating": 5,
-        "date": "Just now",
-        "comment": "Freshly added item. Handcrafted quality!",
-        "verified": true,
-        "location": "Maharashtra"
-      }
-    ]
-  },
-  {
     "id": "6a9bf01f80fd4a2d1e950ee9",
     "slug": "solapuri-shenga-chutney",
     "name": "Solapuri Shenga Chutney",
@@ -783,6 +733,56 @@
         "rating": 5,
         "date": "1 week ago",
         "comment": "Authentic taste and premium packaging. Highly satisfied with Naik Foods.",
+        "verified": true,
+        "location": "Maharashtra"
+      }
+    ]
+  },
+  {
+    "id": "6a9bf11645cffc2a2ea36384",
+    "slug": "kolhapuri-lavangi-mirchi-thecha",
+    "name": "Kolhapuri Lavangi Mirchi Thecha",
+    "marathiName": "कोल्हापुरी लवंगी मिरचीचा ठेचा",
+    "region": "Kolhapur",
+    "category": "Chutney",
+    "price": 160,
+    "originalPrice": 200,
+    "rating": 5,
+    "reviewCount": 1,
+    "weight": "250g",
+    "shelfLife": "6 Months",
+    "fssaiLicense": "11521036000428",
+    "isVeg": true,
+    "isBestSeller": false,
+    "isFastFriendly": false,
+    "inStock": true,
+    "images": [
+      "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&auto=format&fit=crop&q=80"
+    ],
+    "shortDescription": "Fiery stone-pounded green chilli thecha with roasted garlic, cumin and groundnut oil.",
+    "marathiShortDesc": "खलबत्त्यात कुटलेला अस्सल झणझणीत कोल्हापुरी लवंगी मिरचीचा ठेचा.",
+    "description": "Fiery stone-pounded green chilli thecha with roasted garlic, cumin and groundnut oil.",
+    "ingredients": [
+      "Lavangi Green Chillies",
+      "Garlic",
+      "Cumin",
+      "Groundnut Oil",
+      "Rock Salt"
+    ],
+    "nutrition": {
+      "Calories": "350 kcal",
+      "Protein": "8g",
+      "Carbohydrates": "50g",
+      "Fat": "12g"
+    },
+    "allergens": [],
+    "reviews": [
+      {
+        "id": "rev_1788604693267",
+        "author": "Verified Customer",
+        "rating": 5,
+        "date": "Just now",
+        "comment": "Freshly added item. Handcrafted quality!",
         "verified": true,
         "location": "Maharashtra"
       }
