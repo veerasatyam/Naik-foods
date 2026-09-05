@@ -1,6 +1,56 @@
 [
   {
-    "id": "prod_1788603509074",
+    "id": "prod_1788604693267",
+    "slug": "kolhapuri-lavangi-mirchi-thecha",
+    "name": "Kolhapuri Lavangi Mirchi Thecha",
+    "marathiName": "कोल्हापुरी लवंगी मिरचीचा ठेचा",
+    "region": "Kolhapur",
+    "category": "Chutney",
+    "price": 160,
+    "originalPrice": 200,
+    "rating": 5,
+    "reviewCount": 1,
+    "weight": "250g",
+    "isVeg": true,
+    "isBestSeller": false,
+    "isFastFriendly": false,
+    "inStock": true,
+    "fssaiLicense": "11521036000428",
+    "shelfLife": "6 Months",
+    "shortDescription": "Fiery stone-pounded green chilli thecha with roasted garlic, cumin and groundnut oil.",
+    "marathiShortDesc": "खलबत्त्यात कुटलेला अस्सल झणझणीत कोल्हापुरी लवंगी मिरचीचा ठेचा.",
+    "description": "Fiery stone-pounded green chilli thecha with roasted garlic, cumin and groundnut oil.",
+    "ingredients": [
+      "Lavangi Green Chillies",
+      "Garlic",
+      "Cumin",
+      "Groundnut Oil",
+      "Rock Salt"
+    ],
+    "nutrition": {
+      "Calories": "350 kcal",
+      "Protein": "8g",
+      "Carbohydrates": "50g",
+      "Fat": "12g"
+    },
+    "allergens": [],
+    "images": [
+      "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&auto=format&fit=crop&q=80"
+    ],
+    "reviews": [
+      {
+        "id": "rev_1788604693267",
+        "author": "Verified Customer",
+        "rating": 5,
+        "date": "Just now",
+        "comment": "Freshly added item. Handcrafted quality!",
+        "verified": true,
+        "location": "Maharashtra"
+      }
+    ]
+  },
+  {
+    "id": "6a9bf01f80fd4a2d1e950ee9",
     "slug": "solapuri-shenga-chutney",
     "name": "Solapuri Shenga Chutney",
     "marathiName": "सोलापुरी शेंगदाणा चटणी",
@@ -11,12 +61,15 @@
     "rating": 5,
     "reviewCount": 1,
     "weight": "200g",
+    "shelfLife": "9 Months",
+    "fssaiLicense": "11521036000428",
     "isVeg": true,
     "isBestSeller": false,
     "isFastFriendly": false,
     "inStock": true,
-    "fssaiLicense": "11521036000428",
-    "shelfLife": "9 Months",
+    "images": [
+      "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&auto=format&fit=crop&q=80"
+    ],
     "shortDescription": "Fiery traditional roasted peanut chutney with Kolhapuri lavangi mirchi and garlic.",
     "marathiShortDesc": "गावरान शेंगदाणे आणि तिखट लवंगी मिरचीची लज्जतदार सोलापुरी चटणी.",
     "description": "Fiery traditional roasted peanut chutney with Kolhapuri lavangi mirchi and garlic.",
@@ -34,9 +87,6 @@
       "Fat": "12g"
     },
     "allergens": [],
-    "images": [
-      "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&auto=format&fit=crop&q=80"
-    ],
     "reviews": [
       {
         "id": "rev_1788603509074",
@@ -50,7 +100,7 @@
     ]
   },
   {
-    "id": "ambadi-bhajiche-lonche",
+    "id": "6a9bf01f80fd4a2d1e950eea",
     "slug": "ambadi-bhajiche-lonche",
     "name": "Ambadi Bhajiche Lonche (Gongura / Sorrel Leaf Pickle)",
     "marathiName": "अंबाडी भाजीचे लोणचे",
@@ -61,12 +111,16 @@
     "rating": 4.9,
     "reviewCount": 78,
     "weight": "300g",
+    "shelfLife": "9 Months",
+    "fssaiLicense": "11521036000428",
     "isVeg": true,
     "isBestSeller": true,
     "inStock": true,
-    "fssaiLicense": "11521036000428",
-    "shelfLife": "9 Months",
+    "images": [
+      "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&auto=format&fit=crop&q=80"
+    ],
     "shortDescription": "Traditional Vidarbha-style tangy & spicy sorrel leaf pickle made with cold-pressed mustard oil and hand-ground spices.",
+    "marathiShortDesc": "Traditional Vidarbha-style tangy & spicy sorrel leaf pickle made with cold-pressed mustard oil and hand-ground spices.",
     "description": "A rare culinary gem from the heart of Vidarbha. Prepared using farm-fresh Ambadi leaves (sorrel / gongura), seasoned with roasted fenugreek, mustard seeds, and turmeric. Pairs exquisitely with hot Jowar Bhakri and fresh white butter (loni).",
     "ingredients": [
       "Fresh Ambadi Leaves",
@@ -89,10 +143,6 @@
       "Mustard",
       "Asafoetida"
     ],
-    "images": [
-      "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&auto=format&fit=crop&q=80"
-    ],
-    "marathiShortDesc": "Traditional Vidarbha-style tangy & spicy sorrel leaf pickle made with cold-pressed mustard oil and hand-ground spices.",
     "reviews": [
       {
         "id": "r1",
@@ -124,7 +174,7 @@
     ]
   },
   {
-    "id": "kolambi-lonche",
+    "id": "6a9bf01f80fd4a2d1e950eeb",
     "slug": "kolambi-lonche",
     "name": "Konkani Kolambi Lonche (Spiced Prawn Pickle)",
     "marathiName": "कोकणी कोळंबी लोणचे",
@@ -135,12 +185,16 @@
     "rating": 4.9,
     "reviewCount": 94,
     "weight": "250g",
+    "shelfLife": "6 Months",
+    "fssaiLicense": "11521036000428",
     "isVeg": false,
     "isBestSeller": true,
     "inStock": true,
-    "fssaiLicense": "11521036000428",
-    "shelfLife": "6 Months",
+    "images": [
+      "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&auto=format&fit=crop&q=80"
+    ],
     "shortDescription": "Authentic coastal Konkan delicacy made with fresh succulent baby prawns in spicy Malvani spices & natural vinegar.",
+    "marathiShortDesc": "Authentic coastal Konkan delicacy made with fresh succulent baby prawns in spicy Malvani spices & natural vinegar.",
     "description": "Crafted following age-old coastal recipes of Sindhudurg and Ratnagiri. Baby prawns are sun-cured, flash-sautéed in spiced oil, and slow-matured in aromatic Konkan spices. Adds an instant gourmet seafood punch to steamed rice and dal.",
     "ingredients": [
       "Cleaned Baby Prawns",
@@ -162,10 +216,6 @@
     "allergens": [
       "Crustacean / Shellfish"
     ],
-    "images": [
-      "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&auto=format&fit=crop&q=80"
-    ],
-    "marathiShortDesc": "Authentic coastal Konkan delicacy made with fresh succulent baby prawns in spicy Malvani spices & natural vinegar.",
     "reviews": [
       {
         "id": "r4",
@@ -188,7 +238,7 @@
     ]
   },
   {
-    "id": "pune-bhakarwadi",
+    "id": "6a9bf01f80fd4a2d1e950eec",
     "slug": "pune-bhakarwadi",
     "name": "Pune Special Baked Jowar Bhakarwadi",
     "marathiName": "पुणेरी खमंग ज्वारी भाकरवडी",
@@ -199,12 +249,16 @@
     "rating": 4.8,
     "reviewCount": 142,
     "weight": "250g",
+    "shelfLife": "4 Months",
+    "fssaiLicense": "11521036000428",
     "isVeg": true,
     "isBestSeller": true,
     "inStock": true,
-    "fssaiLicense": "11521036000428",
-    "shelfLife": "4 Months",
+    "images": [
+      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&auto=format&fit=crop&q=80"
+    ],
     "shortDescription": "Pune's signature sweet, spicy & crunchy spiral snack enhanced with fiber-rich Jowar (Sorghum).",
+    "marathiShortDesc": "Pune's signature sweet, spicy & crunchy spiral snack enhanced with fiber-rich Jowar (Sorghum).",
     "description": "Crisp rolls packed with a roasted coconut, poppy seeds (khuskhus), sesame, and secret Maharashtrian spices filling. Crafted with healthy jowar flour to deliver the signature crunch with wholesome digestion benefits.",
     "ingredients": [
       "Jowar Flour",
@@ -229,10 +283,6 @@
       "Sesame",
       "Gluten"
     ],
-    "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&auto=format&fit=crop&q=80"
-    ],
-    "marathiShortDesc": "Pune's signature sweet, spicy & crunchy spiral snack enhanced with fiber-rich Jowar (Sorghum).",
     "reviews": [
       {
         "id": "r6",
@@ -255,7 +305,7 @@
     ]
   },
   {
-    "id": "shrewsbury-butter-cookies",
+    "id": "6a9bf01f80fd4a2d1e950eed",
     "slug": "shrewsbury-butter-cookies",
     "name": "Camp Pune Shrewsbury Butter Cookies",
     "marathiName": "पुणेरी श्रूजबरी बटर कुकीज",
@@ -266,12 +316,16 @@
     "rating": 4.9,
     "reviewCount": 186,
     "weight": "300g",
+    "shelfLife": "3 Months",
+    "fssaiLicense": "11521036000428",
     "isVeg": true,
     "isBestSeller": true,
     "inStock": true,
-    "fssaiLicense": "11521036000428",
-    "shelfLife": "3 Months",
+    "images": [
+      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&auto=format&fit=crop&q=80"
+    ],
     "shortDescription": "The world-famous melt-in-your-mouth Pune bakery cookies made with pure butter and real vanilla.",
+    "marathiShortDesc": "The world-famous melt-in-your-mouth Pune bakery cookies made with pure butter and real vanilla.",
     "description": "An iconic heritage recipe from Pune's century-old bakery culture. Rich, crumbly, and golden-baked with pure creamery butter. The quintessential evening companion to hot cutting chai.",
     "ingredients": [
       "Wheat Flour",
@@ -292,10 +346,6 @@
       "Dairy",
       "Gluten"
     ],
-    "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&auto=format&fit=crop&q=80"
-    ],
-    "marathiShortDesc": "The world-famous melt-in-your-mouth Pune bakery cookies made with pure butter and real vanilla.",
     "reviews": [
       {
         "id": "r8",
@@ -309,7 +359,7 @@
     ]
   },
   {
-    "id": "vidarbha-sauji-masala",
+    "id": "6a9bf01f80fd4a2d1e950eee",
     "slug": "vidarbha-sauji-masala",
     "name": "Authentic Vidarbha Sauji Masala (32-Spice Blend)",
     "marathiName": "विदर्भ सावजी मसाला",
@@ -320,12 +370,16 @@
     "rating": 5,
     "reviewCount": 112,
     "weight": "200g",
+    "shelfLife": "12 Months",
+    "fssaiLicense": "11521036000428",
     "isVeg": true,
     "isBestSeller": true,
     "inStock": true,
-    "fssaiLicense": "11521036000428",
-    "shelfLife": "12 Months",
+    "images": [
+      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&auto=format&fit=crop&q=80"
+    ],
     "shortDescription": "The fiery, aromatic 32-ingredient stone-ground spice secret of Nagpur & Vidarbha Sauji cuisine.",
+    "marathiShortDesc": "The fiery, aromatic 32-ingredient stone-ground spice secret of Nagpur & Vidarbha Sauji cuisine.",
     "description": "Hand-pounded using black cardamom, dagad phool (stone flower), nagkesar, triphala, and dry-roasted spices. Delivers the legendary dark gravy with profound smoky depth and bold spice warmth without harshness.",
     "ingredients": [
       "Dagad Phool (Stone Flower)",
@@ -350,10 +404,6 @@
       "Fiber": "14g"
     },
     "allergens": [],
-    "images": [
-      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&auto=format&fit=crop&q=80"
-    ],
-    "marathiShortDesc": "The fiery, aromatic 32-ingredient stone-ground spice secret of Nagpur & Vidarbha Sauji cuisine.",
     "reviews": [
       {
         "id": "r9",
@@ -367,7 +417,7 @@
     ]
   },
   {
-    "id": "hurda-thalipith-bhajni",
+    "id": "6a9bf01f80fd4a2d1e950eef",
     "slug": "hurda-thalipith-bhajni",
     "name": "Tender Hurda (Fresh Jowar) Thalipith Bhajni",
     "marathiName": "ताज्या हुरड्याची थालीपीठ भाजणी",
@@ -378,12 +428,16 @@
     "rating": 4.8,
     "reviewCount": 65,
     "weight": "500g",
+    "shelfLife": "6 Months",
+    "fssaiLicense": "11521036000428",
     "isVeg": true,
     "isBestSeller": true,
     "inStock": true,
-    "fssaiLicense": "11521036000428",
-    "shelfLife": "6 Months",
+    "images": [
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop&q=80"
+    ],
     "shortDescription": "Nutrient-dense multi-grain roasted flour mix infused with tender winter Hurda (fresh green jowar).",
+    "marathiShortDesc": "Nutrient-dense multi-grain roasted flour mix infused with tender winter Hurda (fresh green jowar).",
     "description": "Slow-roasted grains (Jowar, Bajra, Chana dal, Urad dal, Rice, Wheat) blended with dried tender green sorghum (Hurda) and ajwain. Prepare wholesome, fragrant thalipith in just 10 minutes.",
     "ingredients": [
       "Roasted Tender Green Jowar (Hurda)",
@@ -405,10 +459,6 @@
     "allergens": [
       "Gluten"
     ],
-    "images": [
-      "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop&q=80"
-    ],
-    "marathiShortDesc": "Nutrient-dense multi-grain roasted flour mix infused with tender winter Hurda (fresh green jowar).",
     "reviews": [
       {
         "id": "r10",
@@ -422,7 +472,7 @@
     ]
   },
   {
-    "id": "sawai-kolhapuri-thecha",
+    "id": "6a9bf01f80fd4a2d1e950ef0",
     "slug": "sawai-kolhapuri-thecha",
     "name": "Hand-Crushed Kolhapuri Green Chilli Thecha",
     "marathiName": "कोल्हापुरी खर्डा / हिरवी मिरची ठेचा",
@@ -433,12 +483,16 @@
     "rating": 4.9,
     "reviewCount": 138,
     "weight": "200g",
+    "shelfLife": "6 Months",
+    "fssaiLicense": "11521036000428",
     "isVeg": true,
     "isBestSeller": true,
     "inStock": true,
-    "fssaiLicense": "11521036000428",
-    "shelfLife": "6 Months",
+    "images": [
+      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&auto=format&fit=crop&q=80"
+    ],
     "shortDescription": "Pungent fire-roasted green chillies, garlic, and peanuts hand-crushed on traditional stone khalbatta.",
+    "marathiShortDesc": "Pungent fire-roasted green chillies, garlic, and peanuts hand-crushed on traditional stone khalbatta.",
     "description": "A must-have accompaniment on any Maharashtrian plate. Fresh green Lavangi chillies are charred on iron tawa with whole garlic and roasted peanuts, then hand-crushed with sea salt and oil.",
     "ingredients": [
       "Green Chillies",
@@ -458,10 +512,6 @@
     "allergens": [
       "Peanuts"
     ],
-    "images": [
-      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&auto=format&fit=crop&q=80"
-    ],
-    "marathiShortDesc": "Pungent fire-roasted green chillies, garlic, and peanuts hand-crushed on traditional stone khalbatta.",
     "reviews": [
       {
         "id": "r11",
@@ -475,7 +525,7 @@
     ]
   },
   {
-    "id": "sprouted-wheat-chik",
+    "id": "6a9bf01f80fd4a2d1e950ef1",
     "slug": "sprouted-wheat-chik",
     "name": "Natural Sprouted Wheat Flour (Gavhacha Chik)",
     "marathiName": "मोड आलेल्या गव्हाचा चीक",
@@ -486,12 +536,16 @@
     "rating": 4.9,
     "reviewCount": 42,
     "weight": "400g",
+    "shelfLife": "9 Months",
+    "fssaiLicense": "11521036000428",
     "isVeg": true,
     "isBestSeller": false,
     "inStock": true,
-    "fssaiLicense": "11521036000428",
-    "shelfLife": "9 Months",
+    "images": [
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop&q=80"
+    ],
     "shortDescription": "Traditional sundried sprouted wheat extract used for authentic Kurdai, Kheer, and Halwa.",
+    "marathiShortDesc": "Traditional sundried sprouted wheat extract used for authentic Kurdai, Kheer, and Halwa.",
     "description": "Prepared by soaking indigenous whole wheat grains for 3 days, extracting the pure nutrient-rich milk (chik), settling, and sun-drying. Unmatched energy and natural strength booster.",
     "ingredients": [
       "100% Pure Sprouted Wheat Extract (Chik)"
@@ -506,10 +560,6 @@
     "allergens": [
       "Gluten"
     ],
-    "images": [
-      "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop&q=80"
-    ],
-    "marathiShortDesc": "Traditional sundried sprouted wheat extract used for authentic Kurdai, Kheer, and Halwa.",
     "reviews": [
       {
         "id": "r12",
@@ -523,7 +573,7 @@
     ]
   },
   {
-    "id": "shevaga-lonche",
+    "id": "6a9bf01f80fd4a2d1e950ef2",
     "slug": "shevaga-lonche",
     "name": "Artisanal Shevaga (Drumstick) Pickle",
     "marathiName": "पारंपारिक शेवगा शेंगांचे लोणचे",
@@ -534,12 +584,16 @@
     "rating": 4.7,
     "reviewCount": 51,
     "weight": "300g",
+    "shelfLife": "9 Months",
+    "fssaiLicense": "11521036000428",
     "isVeg": true,
     "isBestSeller": false,
     "inStock": true,
-    "fssaiLicense": "11521036000428",
-    "shelfLife": "9 Months",
+    "images": [
+      "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&auto=format&fit=crop&q=80"
+    ],
     "shortDescription": "Tender moringa drumsticks steeped in spiced cold-pressed mustard oil and wild raw mango broth.",
+    "marathiShortDesc": "Tender moringa drumsticks steeped in spiced cold-pressed mustard oil and wild raw mango broth.",
     "description": "A rare heirloom pickle bursting with iron, calcium, and digestion benefits. Fresh tender drumsticks absorb the robust pickling spices, providing a savory, lip-smacking crunch.",
     "ingredients": [
       "Tender Drumsticks (Moringa)",
@@ -563,10 +617,6 @@
       "Mustard",
       "Asafoetida"
     ],
-    "images": [
-      "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&auto=format&fit=crop&q=80"
-    ],
-    "marathiShortDesc": "Tender moringa drumsticks steeped in spiced cold-pressed mustard oil and wild raw mango broth.",
     "reviews": [
       {
         "id": "r-shevaga-lonche",
@@ -580,7 +630,7 @@
     ]
   },
   {
-    "id": "konkan-alphonso-mango-pulp",
+    "id": "6a9bf01f80fd4a2d1e950ef3",
     "slug": "konkan-alphonso-mango-pulp",
     "name": "Ratnagiri Hapus Pure Alphonso Mango Pulp (Aamras)",
     "marathiName": "रत्नागिरी हापूस अस्सल आंबा रस",
@@ -591,12 +641,16 @@
     "rating": 5,
     "reviewCount": 210,
     "weight": "850g Can",
+    "shelfLife": "18 Months",
+    "fssaiLicense": "11521036000428",
     "isVeg": true,
     "isBestSeller": true,
     "inStock": true,
-    "fssaiLicense": "11521036000428",
-    "shelfLife": "18 Months",
+    "images": [
+      "https://images.unsplash.com/photo-1553279768-865429fa0078?w=800&auto=format&fit=crop&q=80"
+    ],
     "shortDescription": "100% pure naturally ripened GI-tagged Ratnagiri Hapus mango pulp with zero artificial colors or essence.",
+    "marathiShortDesc": "100% pure naturally ripened GI-tagged Ratnagiri Hapus mango pulp with zero artificial colors or essence.",
     "description": "Directly from the coastal orchards of Devgad and Ratnagiri. Rich, aromatic, sun-kissed golden pulp that lets you enjoy genuine summer Aamras all year round with hot pooris or modak.",
     "ingredients": [
       "Selected Ratnagiri Alphonso Mangoes",
@@ -611,10 +665,6 @@
       "Fiber": "2.2g"
     },
     "allergens": [],
-    "images": [
-      "https://images.unsplash.com/photo-1553279768-865429fa0078?w=800&auto=format&fit=crop&q=80"
-    ],
-    "marathiShortDesc": "100% pure naturally ripened GI-tagged Ratnagiri Hapus mango pulp with zero artificial colors or essence.",
     "reviews": [
       {
         "id": "r13",
@@ -628,7 +678,7 @@
     ]
   },
   {
-    "id": "maharashtrian-goda-masala",
+    "id": "6a9bf01f80fd4a2d1e950ef4",
     "slug": "maharashtrian-goda-masala",
     "name": "Authentic Pune Goda / Kala Masala",
     "marathiName": "पारंपारिक पुणेरी गोडा / काळा मसाला",
@@ -639,12 +689,16 @@
     "rating": 4.9,
     "reviewCount": 164,
     "weight": "250g",
+    "shelfLife": "12 Months",
+    "fssaiLicense": "11521036000428",
     "isVeg": true,
     "isBestSeller": true,
     "inStock": true,
-    "fssaiLicense": "11521036000428",
-    "shelfLife": "12 Months",
+    "images": [
+      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&auto=format&fit=crop&q=80"
+    ],
     "shortDescription": "The soul of Maharashtrian vegetarian cooking: roasted coconut, sesame, and stone flower spiced blend.",
+    "marathiShortDesc": "The soul of Maharashtrian vegetarian cooking: roasted coconut, sesame, and stone flower spiced blend.",
     "description": "Roasted in pure groundnut oil until dark and aromatic. Essential for authentic Amti, Katachi Amti, Bharli Vangi (stuffed brinjal), and Matki Usal. Imparts sweet aromatic undertones without burning heat.",
     "ingredients": [
       "Coriander Seeds",
@@ -667,10 +721,6 @@
     "allergens": [
       "Sesame"
     ],
-    "images": [
-      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&auto=format&fit=crop&q=80"
-    ],
-    "marathiShortDesc": "The soul of Maharashtrian vegetarian cooking: roasted coconut, sesame, and stone flower spiced blend.",
     "reviews": [
       {
         "id": "r14",
@@ -684,7 +734,7 @@
     ]
   },
   {
-    "id": "jowar-palak-khakhra",
+    "id": "6a9bf01f80fd4a2d1e950ef5",
     "slug": "jowar-palak-khakhra",
     "name": "Roasted Jowar & Spinach (Palak) Coin Khakhra",
     "marathiName": "ज्वारी व पालक खमंग कॉईन खाकरा",
@@ -695,12 +745,16 @@
     "rating": 4.8,
     "reviewCount": 89,
     "weight": "200g",
+    "shelfLife": "6 Months",
+    "fssaiLicense": "11521036000428",
     "isVeg": true,
     "isBestSeller": false,
     "inStock": true,
-    "fssaiLicense": "11521036000428",
-    "shelfLife": "6 Months",
+    "images": [
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop&q=80"
+    ],
     "shortDescription": "100% roasted bite-sized crisp disks infused with fresh spinach and wholesome sorghum millet.",
+    "marathiShortDesc": "100% roasted bite-sized crisp disks infused with fresh spinach and wholesome sorghum millet.",
     "description": "A healthy tea-time crunch packed with iron and dietary fiber. Baked to perfection without deep-frying, offering guilt-free snacking for all age groups.",
     "ingredients": [
       "Whole Jowar Flour",
@@ -722,10 +776,6 @@
       "Sesame",
       "Gluten"
     ],
-    "images": [
-      "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop&q=80"
-    ],
-    "marathiShortDesc": "100% roasted bite-sized crisp disks infused with fresh spinach and wholesome sorghum millet.",
     "reviews": [
       {
         "id": "r-jowar-palak-khakhra",

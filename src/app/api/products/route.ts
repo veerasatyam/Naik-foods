@@ -1,10 +1,15 @@
 import { NextResponse } from "next/server";
-import { getStoredProducts, addProduct, updateProduct, deleteProduct } from "@/lib/db";
+import { 
+  getProductsFromDb, 
+  addProductAsync, 
+  updateProductAsync, 
+  deleteProductAsync 
+} from "@/lib/db";
 import { Product } from "@/data/products";
 
 export async function GET() {
   try {
-    const products = getStoredProducts();
+    const products = await getProductsFromDb();
     return NextResponse.json({ success: true, products });
   } catch (error: any) {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
@@ -67,7 +72,7 @@ export async function POST(req: Request) {
       ],
     };
 
-    const updated = addProduct(newProduct);
+    const updated = await addProductAsync(newProduct);
     return NextResponse.json({ success: true, product: newProduct, products: updated }, { status: 201 });
   } catch (error: any) {
     return NextResponse.json({ success: false, error: error.message }, { status: 400 });
@@ -80,7 +85,7 @@ export async function PUT(req: Request) {
     if (!body.id) {
       return NextResponse.json({ success: false, error: "Product ID is required." }, { status: 400 });
     }
-    const updated = updateProduct(body.id, body.updates);
+    const updated = await updateProductAsync(body.id, body.updates);
     return NextResponse.json({ success: true, products: updated });
   } catch (error: any) {
     return NextResponse.json({ success: false, error: error.message }, { status: 400 });
@@ -94,7 +99,7 @@ export async function DELETE(req: Request) {
     if (!id) {
       return NextResponse.json({ success: false, error: "Product ID query parameter is required." }, { status: 400 });
     }
-    const updated = deleteProduct(id);
+    const updated = await deleteProductAsync(id);
     return NextResponse.json({ success: true, products: updated });
   } catch (error: any) {
     return NextResponse.json({ success: false, error: error.message }, { status: 400 });

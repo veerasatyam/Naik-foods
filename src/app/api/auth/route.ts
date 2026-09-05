@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
-import { getStoredUsers, addUser, User } from "@/lib/db";
+import { getUsersFromDb, addUserAsync, User } from "@/lib/db";
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { action, email, password, name, phone } = body;
 
-    const users = getStoredUsers();
+    const users = await getUsersFromDb();
 
     if (action === "login") {
       if (!email || !password) {
@@ -51,7 +51,7 @@ export async function POST(req: Request) {
         createdAt: new Date().toISOString(),
       };
 
-      addUser(newUser);
+      await addUserAsync(newUser);
       return NextResponse.json({ success: true, user: newUser }, { status: 201 });
     }
 
