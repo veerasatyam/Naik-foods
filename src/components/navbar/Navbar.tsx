@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useApp } from "@/context/AppContext";
-import { PRODUCTS, Product } from "@/data/products";
+import { useAuth } from "@/context/AuthContext";
+import { Product } from "@/data/products";
 import { formatPrice } from "@/lib/utils";
 import { 
   ShoppingBag, 
@@ -16,7 +17,9 @@ import {
   MapPin, 
   Phone,
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  User,
+  ShieldCheck
 } from "lucide-react";
 
 export function Navbar() {
@@ -27,15 +30,17 @@ export function Navbar() {
     t, 
     cartItemCount, 
     setIsCartOpen, 
-    wishlist 
+    wishlist,
+    products 
   } = useApp();
+  const { user, isAdmin, isAuthenticated } = useAuth();
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
   const searchResults: Product[] = searchQuery.trim()
-    ? PRODUCTS.filter((p) => {
+    ? products.filter((p) => {
         const q = searchQuery.toLowerCase();
         return (
           p.name.toLowerCase().includes(q) ||
@@ -148,6 +153,38 @@ export function Navbar() {
               </span>
             </button>
 
+            {/* Admin Dashboard Quick Link (visible if logged in as Admin) */}
+            {isAdmin && (
+              <Link
+                href="/admin"
+                className="hidden md:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-amber-50 border border-amber-300 text-amber-900 hover:bg-amber-100 text-xs font-bold transition-all shadow-2xs"
+              >
+                <ShieldCheck className="w-4 h-4 text-amber-600" />
+                <span>Admin</span>
+              </Link>
+            )}
+
+            {/* User Account / Sign In */}
+            {isAuthenticated ? (
+              <Link
+                href="/account"
+                aria-label="My Account"
+                className="p-2 sm:px-3 sm:py-2 rounded-xl text-stone-700 hover:bg-stone-100 flex items-center gap-1.5 transition-colors border border-stone-200 text-xs font-bold"
+              >
+                <User className="w-4 h-4 text-brand-700" />
+                <span className="hidden md:inline max-w-[90px] truncate">{user?.name.split(" ")[0]}</span>
+              </Link>
+            ) : (
+              <Link
+                href="/login"
+                aria-label="Sign In"
+                className="p-2 sm:px-3 sm:py-2 rounded-xl text-stone-700 hover:bg-stone-100 flex items-center gap-1.5 transition-colors border border-stone-200 text-xs font-bold"
+              >
+                <User className="w-4 h-4 text-stone-600" />
+                <span className="hidden sm:inline">Sign In</span>
+              </Link>
+            )}
+
             {/* Wishlist Link */}
             <Link
               href="/store?filter=wishlist"
@@ -201,6 +238,40 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+            
+            {/* Mobile Auth and Admin Links */}
+            <div className="pt-2 flex flex-col gap-2 border-t border-stone-100">
+              {isAdmin && (
+                <Link
+                  href="/admin"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center gap-2 text-sm font-bold text-amber-900 bg-amber-50 px-3 py-2 rounded-lg border border-amber-200"
+                >
+                  <ShieldCheck className="w-4 h-4 text-amber-600" />
+                  <span>Admin Dashboard</span>
+                </Link>
+              )}
+              {isAuthenticated ? (
+                <Link
+                  href="/account"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center gap-2 text-sm font-semibold text-stone-800 hover:text-brand-600 py-1"
+                >
+                  <User className="w-4 h-4 text-brand-600" />
+                  <span>My Account ({user?.name})</span>
+                </Link>
+              ) : (
+                <Link
+                  href="/login"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center gap-2 text-sm font-semibold text-stone-800 hover:text-brand-600 py-1"
+                >
+                  <User className="w-4 h-4 text-stone-600" />
+                  <span>Sign In / Register</span>
+                </Link>
+              )}
+            </div>
+
             <div className="pt-2 flex items-center justify-between text-xs text-stone-600">
               <span>{t.nav.helpline}</span>
             </div>

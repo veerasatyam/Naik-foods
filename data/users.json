@@ -1,0 +1,18 @@
+[
+  {
+    "id": "usr_admin_1",
+    "name": "Satyam (Admin)",
+    "email": "satyamsvs788@gmail.com",
+    "phone": "9730046247",
+    "role": "admin",
+    "createdAt": "2026-09-05T10:20:05.124Z"
+  },
+  {
+    "id": "usr_demo_customer",
+    "name": "Aparna Kulkarni",
+    "email": "customer@naikfoods.co.in",
+    "phone": "9822012345",
+    "role": "customer",
+    "createdAt": "2026-09-05T10:20:05.124Z"
+  }
+]

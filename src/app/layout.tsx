@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { AuthProvider } from "@/context/AuthContext";
 import { AppProvider } from "@/context/AppContext";
 import { Navbar } from "@/components/navbar/Navbar";
 import { CartDrawer } from "@/components/cart/CartDrawer";
@@ -82,12 +83,14 @@ export default function RootLayout({
         />
       </head>
       <body className="flex min-h-full flex-col font-sans">
-        <AppProvider>
-          <Navbar />
-          <CartDrawer />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </AppProvider>
+        <AuthProvider>
+          <AppProvider>
+            <Navbar />
+            <CartDrawer />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </AppProvider>
+        </AuthProvider>
       </body>
     </html>
   );

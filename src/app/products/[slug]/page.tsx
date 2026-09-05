@@ -1,22 +1,27 @@
 import React from "react";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { PRODUCTS, Product } from "@/data/products";
+import { Product } from "@/data/products";
+import { getStoredProducts } from "@/lib/db";
 import { ProductDetailClient } from "./ProductDetailClient";
+
+export const dynamicParams = true;
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return PRODUCTS.map((product) => ({
+  const products = getStoredProducts();
+  return products.map((product) => ({
     slug: product.slug,
   }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const product = PRODUCTS.find((p) => p.slug === slug);
+  const products = getStoredProducts();
+  const product = products.find((p) => p.slug === slug);
 
   if (!product) {
     return {
@@ -41,14 +46,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProductPage({ params }: Props) {
   const { slug } = await params;
-  const product = PRODUCTS.find((p) => p.slug === slug);
+  const products = getStoredProducts();
+  const product = products.find((p) => p.slug === slug);
 
   if (!product) {
     notFound();
   }
 
   // Related products from same region or category
-  const relatedProducts = PRODUCTS.filter(
+  const relatedProducts = products.filter(
     (p) => (p.region === product.region || p.category === product.category) && p.id !== product.id
   ).slice(0, 4);
 

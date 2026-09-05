@@ -26,6 +26,8 @@ interface AppContextType {
   wishlist: string[];
   toggleWishlist: (productId: string) => void;
   isInWishlist: (productId: string) => boolean;
+  products: Product[];
+  refreshProducts: () => Promise<void>;
   pincode: string;
   setPincode: (code: string) => void;
   toastMessage: string | null;
@@ -37,12 +39,30 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 export const FREE_SHIPPING_THRESHOLD = 499;
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
+  const [products, setProducts] = useState<Product[]>(PRODUCTS);
   const [locale, setLocale] = useState<Locale>("en");
   const [cart, setCart] = useState<CartItem[]>([]);
   const [wishlist, setWishlist] = useState<string[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [pincode, setPincode] = useState("411002"); // default Pune
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+
+  const refreshProducts = async () => {
+    try {
+      const res = await fetch("/api/products");
+      const data = await res.json();
+      if (data.success && Array.isArray(data.products)) {
+        setProducts(data.products);
+      }
+    } catch {
+      // fallback to initial PRODUCTS
+    }
+  };
+
+  // Fetch dynamic products on mount
+  useEffect(() => {
+    refreshProducts();
+  }, []);
 
   // Load persistent state from localStorage on mount
   useEffect(() => {
@@ -174,6 +194,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         wishlist,
         toggleWishlist,
         isInWishlist,
+        products,
+        refreshProducts,
         pincode,
         setPincode,
         toastMessage,

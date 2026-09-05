@@ -37,13 +37,36 @@ A modern, accessible, high-performance e-commerce platform for **Naik Foods**, c
    - **Instant Pincode Delivery Estimator** for 6-digit Indian postal codes.
    - **1-Click WhatsApp Direct Ordering** with pre-filled cart payload.
 
+6. **Non-Technical Admin Dashboard & Product Catalog Manager**:
+   - **No-Code Product Creation** (`/admin/products/new`): Store managers can add new authentic delicacies with English & Marathi titles, region, category, price, discount, weight, shelf life, Veg/Non-Veg indicator, and nutritional values.
+   - **Live Stock Management** (`/admin/products`): Instant 1-click toggle for In-Stock / Out-of-Stock and item deletion.
+   - **Dynamic Routes & SEO**: Every newly added product immediately gets its own SEO-optimized landing page at `/products/[slug]` with structured schema.org JSON-LD.
+
+7. **Customer & Admin Authentication**:
+   - **Customer Portal** (`/login`, `/register`, `/account`): Sign in, manage profile, track simulated past orders, and view saved shipping addresses.
+   - **Admin Access**: Log in with `satyamsvs788@gmail.com` to unlock the Admin Dashboard button and catalog management privileges.
+
 ---
 
 ## Tech Stack
 * **Framework**: Next.js 15 (App Router, React 19, TypeScript)
 * **Styling**: Tailwind CSS (custom brand palette with WCAG AA compliance)
 * **Icons**: Lucide React
-* **Hosting / Runtime**: Node.js v24+
+* **Data Storage**: File-backed JSON database with Next.js dynamic Route Handlers (`/api/products`, `/api/auth`)
+* **Hosting / Runtime**: Node.js v20+ / v24+
+
+---
+
+## Admin Credentials & How to Add New Products
+
+1. Navigate to `/login` or click **Sign In** in the top navigation bar.
+2. Click the **"⚡ Fill Admin Demo Credentials"** button (or enter `satyamsvs788@gmail.com`).
+3. Click **"Sign In"**. You are now logged in as an Administrator!
+4. An amber **"Admin"** button will appear in the navigation bar. Click it or visit `/admin`.
+5. Click **"Add New Product"** (`/admin/products/new`), fill out the product details (e.g. Solapuri Shenga Chutney), select an image preset, and click **"Publish Product to Store"**.
+6. The item is immediately live across the store, search dialog, and on its dedicated URL!
+
+---
 
 ---
 

@@ -24,9 +24,9 @@ import {
 } from "lucide-react";
 
 export default function HomePage() {
-  const { t, locale, addToCart } = useApp();
+  const { t, locale, addToCart, products } = useApp();
 
-  const bestSellers = PRODUCTS.filter((p) => p.isBestSeller).slice(0, 8);
+  const bestSellers = products.filter((p) => p.isBestSeller).slice(0, 8);
   const featuredRecipes = RECIPES.slice(0, 3);
 
   return (

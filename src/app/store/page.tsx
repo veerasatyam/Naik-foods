@@ -2,7 +2,6 @@
 
 import React, { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { PRODUCTS, CATEGORIES, REGIONS, Product } from "@/data/products";
 import { ProductCard } from "@/components/product/ProductCard";
 import { useApp } from "@/context/AppContext";
 import { Filter, SlidersHorizontal, Search, X, Sparkles } from "lucide-react";
@@ -14,7 +13,17 @@ function StoreContent() {
   const initialRegion = searchParams.get("region") || "All";
   const initialFilter = searchParams.get("filter") || "";
 
-  const { wishlist, locale } = useApp();
+  const { wishlist, locale, products } = useApp();
+
+  const categories = useMemo(() => {
+    const set = new Set(products.map((p) => p.category));
+    return ["All", ...Array.from(set)];
+  }, [products]);
+
+  const regions = useMemo(() => {
+    const set = new Set(products.map((p) => p.region));
+    return ["All", ...Array.from(set)];
+  }, [products]);
 
   const [search, setSearch] = useState(initialQuery);
   const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
@@ -29,7 +38,7 @@ function StoreContent() {
 
   // Filter & Sort Pipeline
   const filteredProducts = useMemo(() => {
-    return PRODUCTS.filter((product) => {
+    return products.filter((product) => {
       // Wishlist filter
       if (initialFilter === "wishlist" && !wishlist.includes(product.id)) {
         return false;
@@ -68,7 +77,7 @@ function StoreContent() {
       if (sortBy === "rating") return b.rating - a.rating;
       return (b.isBestSeller ? 1 : 0) - (a.isBestSeller ? 1 : 0);
     });
-  }, [search, selectedCategory, selectedRegion, dietFilter, sortBy, initialFilter, wishlist]);
+  }, [products, search, selectedCategory, selectedRegion, dietFilter, sortBy, initialFilter, wishlist]);
 
   const resetFilters = () => {
     setSearch("");
@@ -117,7 +126,7 @@ function StoreContent() {
 
         {/* Category Pills Bar */}
         <div className="flex items-center gap-2 overflow-x-auto pt-6 pb-2 no-scrollbar">
-          {CATEGORIES.map((cat) => (
+          {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
@@ -159,7 +168,7 @@ function StoreContent() {
                 Region of Origin
               </label>
               <div className="space-y-1.5">
-                {REGIONS.map((reg) => (
+                {regions.map((reg) => (
                   <button
                     key={reg}
                     onClick={() => setSelectedRegion(reg)}
