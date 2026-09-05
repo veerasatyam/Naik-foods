@@ -229,6 +229,16 @@ During the end-to-end development, debugging, and cloud deployment of this proje
 
 ---
 
+### Problem 11: Interactive Video Integration & Performance Preservation
+* **The Challenge**: Adding video reels and culinary walkthroughs to an e-commerce platform can cause bundle bloat, layout shifts (CLS), and heavy initial data consumption if video streams are loaded greedily.
+* **How We Solved It**:
+  - Engineered an on-demand modal architecture (`VideoModal.tsx`) with lazy-loaded video containers that only initialize when clicked.
+  - Built **`HeritageReels`** on the homepage featuring 4 curated culinary reels with poster thumbnails, duration badges, and direct **"Add to Bag"** shoppable buttons.
+  - Embedded an interactive video walkthrough launcher in all recipe pages (`/recipes/[slug]`).
+  - Preserved the ultra-lean **103 kB shared JS footprint** with zero render-blocking script overhead.
+
+---
+
 ## 4. Deliverables Summary
 
 | Deliverable | Location / Link |

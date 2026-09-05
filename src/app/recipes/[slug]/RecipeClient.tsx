@@ -13,18 +13,28 @@ import {
   Sparkles, 
   ShoppingBag, 
   Check, 
-  ChevronRight,
-  Utensils
+  ChevronRight, 
+  Utensils,
+  Play
 } from "lucide-react";
+import { VideoModal } from "@/components/video/VideoModal";
 
 interface Props {
   recipe: Recipe;
   linkedProducts: Product[];
 }
 
+const RECIPE_VIDEOS: Record<string, string> = {
+  "authentic-pune-misal": "https://www.youtube-nocookie.com/embed/1vRzT4mK_E0",
+  "crispy-hurda-thalipith": "https://www.youtube-nocookie.com/embed/B_4k8rT8Q1U",
+  "nagpur-sauji-curry": "https://www.youtube-nocookie.com/embed/j4_e6k9f8uA",
+  "konkan-solkadhi": "https://www.youtube-nocookie.com/embed/5kQ_s_X56F4",
+};
+
 export function RecipeClient({ recipe, linkedProducts }: Props) {
   const { addToCart, locale } = useApp();
   const [allAdded, setAllAdded] = useState(false);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const handleAddAllToCart = () => {
     linkedProducts.forEach((prod) => {
@@ -35,6 +45,7 @@ export function RecipeClient({ recipe, linkedProducts }: Props) {
   };
 
   const totalBundlePrice = linkedProducts.reduce((sum, p) => sum + p.price, 0);
+  const videoEmbed = RECIPE_VIDEOS[recipe.slug] || "https://www.youtube-nocookie.com/embed/5kQ_s_X56F4";
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
@@ -80,9 +91,30 @@ export function RecipeClient({ recipe, linkedProducts }: Props) {
         </div>
       </div>
 
-      {/* Featured Recipe Hero Image */}
-      <div className="relative aspect-video w-full rounded-3xl overflow-hidden shadow-md bg-stone-100">
-        <Image src={recipe.image} alt={recipe.title} fill priority className="object-cover" />
+      {/* Featured Recipe Hero Image with Video Launcher */}
+      <div
+        onClick={() => setIsVideoOpen(true)}
+        className="relative aspect-video w-full rounded-3xl overflow-hidden shadow-xl bg-stone-900 group cursor-pointer border border-stone-200"
+      >
+        <Image
+          src={recipe.image}
+          alt={recipe.title}
+          fill
+          priority
+          className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+        />
+
+        {/* Video Scrim & Play Button */}
+        <div className="absolute inset-0 bg-black/25 group-hover:bg-black/35 transition-colors flex items-center justify-center">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-brand-600 group-hover:bg-brand-500 text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-all duration-300 border-4 border-white/50">
+            <Play className="w-7 h-7 sm:w-8 sm:h-8 fill-white translate-x-0.5" />
+          </div>
+        </div>
+
+        <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-stone-900/90 backdrop-blur-md px-4 py-2 rounded-xl text-white text-xs font-bold flex items-center gap-2 border border-white/20 shadow-lg">
+          <Play className="w-3.5 h-3.5 fill-saffron-400 text-saffron-400" />
+          <span>{locale === "mr" ? "पाककृतीची चित्रफीत पाहा" : "Watch Step-by-Step Cooking Video"}</span>
+        </div>
       </div>
 
       {/* Shoppable Ingredients Bundle Box (High Conversion Feature) */}
@@ -186,6 +218,26 @@ export function RecipeClient({ recipe, linkedProducts }: Props) {
           </div>
         </div>
       </div>
+
+      {/* Recipe Cooking Video Modal */}
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        title={recipe.title}
+        marathiTitle={recipe.marathiTitle}
+        videoUrl={videoEmbed}
+        description={`Step-by-step masterclass: Cooking authentic ${recipe.title}`}
+        linkedProduct={
+          linkedProducts[0]
+            ? {
+                id: linkedProducts[0].id,
+                slug: linkedProducts[0].slug,
+                name: linkedProducts[0].name,
+                price: linkedProducts[0].price,
+              }
+            : undefined
+        }
+      />
     </div>
   );
 }

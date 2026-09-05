@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useApp } from "@/context/AppContext";
@@ -8,6 +8,8 @@ import { PRODUCTS } from "@/data/products";
 import { RECIPES } from "@/data/recipes";
 import { ProductCard } from "@/components/product/ProductCard";
 import { RegionalExplorer } from "@/components/regional/RegionalExplorer";
+import { HeritageReels } from "@/components/video/HeritageReels";
+import { VideoModal } from "@/components/video/VideoModal";
 import { formatPrice } from "@/lib/utils";
 import { 
   ArrowRight, 
@@ -20,11 +22,13 @@ import {
   BookOpen, 
   Star, 
   CheckCircle2,
-  HeartHandshake
+  HeartHandshake,
+  Play
 } from "lucide-react";
 
 export default function HomePage() {
   const { t, locale, addToCart, products } = useApp();
+  const [isHeroVideoOpen, setIsHeroVideoOpen] = useState(false);
 
   const bestSellers = products.filter((p) => p.isBestSeller).slice(0, 8);
   const featuredRecipes = RECIPES.slice(0, 3);
@@ -126,6 +130,18 @@ export default function HomePage() {
                     Our Story
                   </Link>
                 </div>
+
+                {/* Interactive Video Play Button */}
+                <button
+                  onClick={() => setIsHeroVideoOpen(true)}
+                  aria-label="Watch Heritage Story Video"
+                  className="absolute top-4 right-4 z-20 bg-stone-900/90 hover:bg-black text-white px-3.5 py-2 rounded-full text-xs font-bold flex items-center gap-2 shadow-xl backdrop-blur-md border border-white/25 transition-all hover:scale-105 active:scale-95 group"
+                >
+                  <span className="w-5 h-5 rounded-full bg-saffron-500 text-stone-900 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Play className="w-3 h-3 fill-stone-900 translate-x-0.2" />
+                  </span>
+                  <span>{locale === "mr" ? "चित्रफीत पाहा" : "Watch Heritage Video"}</span>
+                </button>
               </div>
             </div>
           </div>
@@ -134,6 +150,9 @@ export default function HomePage() {
 
       {/* 2. Interactive Regional Explorer Section */}
       <RegionalExplorer />
+
+      {/* 3. Shoppable Heritage Video Reels */}
+      <HeritageReels />
 
       {/* 3. Bestsellers & Heritage Specialties */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -378,6 +397,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Hero Video Lightbox */}
+      <VideoModal
+        isOpen={isHeroVideoOpen}
+        onClose={() => setIsHeroVideoOpen(false)}
+        title="Naik Foods: 87 Years of Authentic Culinary Heritage (1938-2025)"
+        marathiTitle="नाईक फूड्स: १९३८ पासून जपलेली अस्सल महाराष्ट्रीयन परंपरा"
+        videoUrl="https://www.youtube-nocookie.com/embed/5kQ_s_X56F4"
+        description="From our ancestral stone mortars in Pusad to the cultural heart of Pune, discover how three generations preserve heirloom recipes."
+      />
     </div>
   );
 }

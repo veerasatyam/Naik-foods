@@ -50,6 +50,11 @@ A modern, accessible, high-performance e-commerce platform for **Naik Foods**, c
    - **Customer Portal** (`/login`, `/register`, `/account`): Sign in, manage profile, track simulated past orders, and view saved shipping addresses.
    - **Admin Access**: Log in with `satyamsvs788@gmail.com` to unlock the Admin Dashboard button and catalog management privileges.
 
+8. **Interactive Shoppable Video Reels & Documentary Media**:
+   - **Hero Heritage Video Player**: 1-click modal showcasing the 87-year culinary story from Pusad to Pune.
+   - **Shoppable Video Reels (`<HeritageReels />`)**: 4 video reels covering Sauji stone-grinding, clay-jar Ambadi curing, Pune Misal tarri boiling, and Kolhapuri Thecha pounding with direct 1-click cart purchases.
+   - **Recipe Video Walkthroughs (`/recipes/[slug]`)**: Step-by-step masterclasses directly embedded inside each authentic recipe page.
+
 ---
 
 ## Tech Stack
